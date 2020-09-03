@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import {Subscription} from "rxjs";
-import {TimerObservable} from "rxjs/observable/TimerObservable";
+//import {TimerObservable} from "rxjs/observable/TimerObservable";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/Principal']);
     }
   }
-  MoverBarraDeProgreso() {
+  /*MoverBarraDeProgreso() {
     
     this.logeando=false;
     this.clase="progress-bar progress-bar-danger progress-bar-striped active";
@@ -77,5 +77,5 @@ export class LoginComponent implements OnInit {
     });
     //this.logeando=true;
   }
-
+*/
 }
