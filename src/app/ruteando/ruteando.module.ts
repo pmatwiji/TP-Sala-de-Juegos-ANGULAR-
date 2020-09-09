@@ -23,6 +23,7 @@ import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-goo
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 
 
+
 // declaro donde quiero que se dirija
 const MiRuteo = [
 {path: 'Jugadores' , component: JugadoresListadoComponent},
@@ -35,7 +36,7 @@ const MiRuteo = [
 {path: 'Listado' , component: ListadoComponent},
 {path: 'Paises' , component: ListadoDePaisesComponent},
 
-{ path: 'Juegos' ,
+{ path: 'juegos' ,
 component: JuegosComponent ,
 children:
      [{path: '' , component: MenuCardComponent},

@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 import {Subscription} from "rxjs";
-//import {TimerObservable} from "rxjs/observable/TimerObservable";
+import {TimerObservable} from "rxjs/observable/TimerObservable";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
@@ -21,6 +22,7 @@ export class LoginComponent implements OnInit {
   clase="progress-bar progress-bar-info progress-bar-striped ";
 
   constructor(
+    private title:Title,
     private route: ActivatedRoute,
     private router: Router) {
       this.progreso=0;
@@ -29,6 +31,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.title.setTitle("Sala de Juegos - Login");
   }
 
   Entrar() {
@@ -36,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/Principal']);
     }
   }
-  /*MoverBarraDeProgreso() {
+  MoverBarraDeProgreso() {
     
     this.logeando=false;
     this.clase="progress-bar progress-bar-danger progress-bar-striped active";
@@ -75,7 +78,7 @@ export class LoginComponent implements OnInit {
           break;
       }     
     });
-    //this.logeando=true;
+    this.logeando=true;
   }
-*/
+
 }

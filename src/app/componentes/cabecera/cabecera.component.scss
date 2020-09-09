@@ -1,0 +1,76 @@
+@import '../../../styles.scss';
+
+.container__cabecera{
+    width: 100%;
+    height: 10%;
+    padding-top: 1em;
+    background: transparent;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .container__titulo{
+        width: calc(100% / 3.5);
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+        .titulo {
+            font-family: $fuente_principal;
+            font-size: 2.5em;
+            color: #F1E479;
+            //min-width: 15em;
+        }
+    }
+    .container__registro {
+        display: flex;
+        width: calc(100% / 3.5);
+        height: 100%;
+    }
+    .container__mis-datos{
+        display: flex;
+        width: calc(100% / 3.5);
+        height: 100%;
+    }
+
+}
+
+
+
+
+
+.panel
+{
+    height: 200px;
+    //background-image: url("../../../assets/imagenes/cabecera.png");
+    background: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.hero-text {
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #3E06B0;
+}
+
+.hero-text a {
+border: none;
+outline: 0;
+display: inline-block;
+padding: 10px 25px;
+color: black;
+background-color: #ddd;
+text-align: center;
+cursor: pointer;
+}
+
+.hero-text a:hover {
+background-color: #555;
+color: white;
+}
