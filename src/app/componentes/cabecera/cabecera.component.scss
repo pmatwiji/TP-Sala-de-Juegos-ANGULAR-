@@ -4,73 +4,75 @@
     width: 100%;
     height: 10%;
     padding-top: 1em;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.267);
     position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .container__titulo{
+    .container__titulo, .container__registro, .container__mis-datos{
         width: calc(100% / 3.5);
-        height: 100%;
+        //height: 100%;
         justify-content: center;
+        //align-items: center;
         text-align: center;
         .titulo {
             font-family: $fuente_principal;
             font-size: 2.5em;
-            color: #F1E479;
+            letter-spacing: 3px;
+            color: #ffffff;
+            animation: glow 1s ease-in-out infinite alternate;
             //min-width: 15em;
         }
     }
     .container__registro {
-        display: flex;
-        width: calc(100% / 3.5);
-        height: 100%;
+        .list__registro {
+            display: flex;
+            list-style: none;
+            .btn__registro, .btn__login{
+                position: relative;
+                top: 0;
+                margin: 0 1em;
+                background-color: #669934;
+                border: 1px solid #4A791D;
+                padding: 10px;
+                width: 7em;
+                border-radius: 20px;
+                font-weight: bold;
+                box-shadow: 0px 5px 0px #4A791D;
+                &:active {
+                    box-shadow: none;
+                    top: 5px;
+                    transition: All 250ms ease;
+                }
+                a{
+                    text-decoration: none;
+                    color: whitesmoke;
+                }
+                
+            }
+            .btn__login {
+                background-color: #E60024;
+                border: 1px solid #AE0313;
+                box-shadow: 0px 5px 0px #AE0313;
+            }
+        }
+        
     }
     .container__mis-datos{
-        display: flex;
-        width: calc(100% / 3.5);
-        height: 100%;
+        color: whitesmoke;
     }
 
 }
 
 
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgba(255, 251, 44, 0.411), 0 0 20px rgba(255, 251, 44, 0.411), 0 0 30px #f5e239, 0 0 40px #f5e239, 0 0 50px #f5e239, 0 0 60px #f5e239, 0 0 70px #f5e239;
+    }
+    
+    to {
+      text-shadow: 0 0 20px rgba(255, 251, 44, 0.411), 0 0 30px #fff25d, 0 0 40px #fff25d, 0 0 50px #fff25d, 0 0 60px #fff25d, 0 0 70px #fff25d, 0 0 80px #fff25d;
+    }
+  }
 
 
-
-.panel
-{
-    height: 200px;
-    //background-image: url("../../../assets/imagenes/cabecera.png");
-    background: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-
-.hero-text {
-text-align: center;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: #3E06B0;
-}
-
-.hero-text a {
-border: none;
-outline: 0;
-display: inline-block;
-padding: 10px 25px;
-color: black;
-background-color: #ddd;
-text-align: center;
-cursor: pointer;
-}
-
-.hero-text a:hover {
-background-color: #555;
-color: white;
-}
