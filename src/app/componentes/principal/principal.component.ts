@@ -12,10 +12,18 @@ export class PrincipalComponent implements OnInit {
     isFirstOpen: true,
     isFirstDisabled: false
   };
+  
+  opcionSeleccionada: string;
+
   constructor(private title:Title) {  }
 
   ngOnInit() {
     this.title.setTitle("Sala de Juegos - Menu Principal");
+  }
+
+  verOpcion(opcion: string){
+    this.opcionSeleccionada=opcion;
+    console.log("dos: " + opcion);
   }
 
  

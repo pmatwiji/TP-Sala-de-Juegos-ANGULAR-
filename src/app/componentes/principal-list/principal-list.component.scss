@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+.container-list {
+    margin-top: 10vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    width: 35vw;
+    min-height: 65vh;
+    text-align: center;
+    font-family: $fuente_italic;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    border-radius: 10%;
+    color: $--main_color;
+    letter-spacing: 3px;
+    box-sizing: border-box;   
+    ul{
+        list-style:none;
+        margin: auto;
+        p {
+            padding: 1em 0px;
+            &:hover {
+                color: whitesmoke;
+                animation: glow 1s ease-in-out infinite alternate;
+
+            }
+        }
+    }
+}
+
+
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgba(255, 251, 44, 0.411), 0 0 20px rgba(255, 251, 44, 0.411), 0 0 30px #f5e239, 0 0 40px #f5e239, 0 0 50px #f5e239, 0 0 60px #f5e239, 0 0 70px #f5e239;
+    }
+    
+    to {
+      text-shadow: 0 0 20px rgba(255, 251, 44, 0.411), 0 0 30px $--main_color, 0 0 40px $--main_color, 0 0 50px$--main_color, 0 0 60px$--main_color, 0 0 70px $--main_color, 0 0 80px$--main_color;
+    }
+  }
