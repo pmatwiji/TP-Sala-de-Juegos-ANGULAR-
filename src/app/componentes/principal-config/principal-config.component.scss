@@ -1,12 +1,12 @@
 @import "../../../styles.scss";
 
 .container__config{
-    width: 100%;
-    height: 100vh;
+    @include boxDerechaPrincipal;
+    border: 5px solid rgb(124, 20, 172);
+    border-radius: 15px;
     background: url(../../../assets/imagenes/ruido.jpg);
     animation: animate 0.5s steps(10) infinite;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     h1{
@@ -16,29 +16,6 @@
         color: $clr-dark;
         font-weight: bolder;
     }
-}
-
-.btn__back{
-    text-align: center;
-    background-color: #669934;
-    border: 1px solid #4A791D;
-    padding: 10px;
-    width: 8vw;
-    border-radius: 20px;
-    font-weight: bold;
-    box-shadow: 0px 5px 0px #4A791D;
-    &:active {
-        box-shadow: none;
-        top: 5px;
-        transition: All 250ms ease;
-    }
-    a{
-        font-size: 1.125vw;
-        text-decoration: none;
-        color: whitesmoke;
-        margin: auto;
-    }
-    
 }
 
 @keyframes animate {

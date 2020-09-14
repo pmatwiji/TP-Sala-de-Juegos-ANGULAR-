@@ -13,9 +13,9 @@ export class PrincipalArcadeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  verOpcion(opcion: string){
-    this.opcionSeleccionada=opcion;
-    console.log("tres: " + opcion);
-  }
+  // verOpcion(opcion: string){
+  //   this.opcionSeleccionada=opcion;
+  //   console.log("tres: " + opcion);
+  // }
 
 }

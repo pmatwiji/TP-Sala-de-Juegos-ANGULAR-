@@ -23,7 +23,7 @@
             padding: 1em 0px;
             &:hover {
                 color: whitesmoke;
-                animation: glow 1s ease-in-out infinite alternate;
+                @include glowLetra;
 
             }
         }

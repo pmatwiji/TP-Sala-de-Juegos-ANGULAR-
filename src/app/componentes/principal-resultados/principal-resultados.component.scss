@@ -1,0 +1,24 @@
+@import "../../../styles.scss";
+
+.container__listadoResultados{
+    @include boxDerechaPrincipal;
+    border: 5px solid rgb(124, 20, 172);
+    border-radius: 15px;
+    background-color: $clr-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $fuente_arcade;
+    h1{
+        color: $clr-btn;
+    }
+    table{
+        text-align: center;
+        width: 90%;
+        font-size: 1.5em;
+        letter-spacing: 3px;
+        thead{
+            color: red;
+        }
+    }
+}

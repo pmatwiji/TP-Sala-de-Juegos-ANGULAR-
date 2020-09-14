@@ -9,6 +9,9 @@
   <div class="cont">
     <app-principal-list (opcionArcadeEvento)="verOpcion($event)" ></app-principal-list>
     <app-principal-arcade [opcionSeleccionada]="opcionSeleccionada" *ngIf="opcionSeleccionada=='juegos'"></app-principal-arcade>
+    <app-principal-resultados *ngIf="opcionSeleccionada=='ranking'"></app-principal-resultados>
+    <app-principal-jugadores *ngIf="opcionSeleccionada=='jugadores'"></app-principal-jugadores>    
+    <app-principal-config *ngIf="opcionSeleccionada=='config'"></app-principal-config>
   </div>
 </div>
 

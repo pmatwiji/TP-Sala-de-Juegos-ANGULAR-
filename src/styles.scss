@@ -1,7 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 $fuente_principal: Super Retro;
 $fuente_italic: Super Retro Italic;
+$fuente_arcade: Arcade;
 $--main_color:#fff25d;
+$clr-dark: rgb(13,17,19);
+$clr-ligth: #fff;
+$clr-btn: #FF7300;
+
+@mixin glowLetra {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@mixin glowBox {
+  animation: glowbox 1s ease-in-out infinite alternate;
+}
+
+@mixin boxDerechaPrincipal {
+  width: 50vw;
+  margin-top: 7.5%;
+  height: 90%;
+}
 
 html{
     background-color: black;
@@ -16,3 +34,29 @@ html{
     font-family: 'Super Retro Italic';
     src: url("./assets/fuentes/Super\ Retro\ Italic\ M54.ttf");
 }
+
+@font-face {
+  font-family: 'Arcade';
+  src: url("./assets/fuentes/ARCADECLASSIC.TTF");
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgba(255, 251, 44, 0.411), 0 0 20px rgba(255, 251, 44, 0.411), 0 0 30px #f5e239, 0 0 40px #f5e239, 0 0 50px #f5e239, 0 0 60px #f5e239, 0 0 70px #f5e239;
+    }
+    
+    to {
+      text-shadow: 0 0 20px rgba(255, 251, 44, 0.411), 0 0 30px $--main_color, 0 0 40px $--main_color, 0 0 50px$--main_color, 0 0 60px$--main_color, 0 0 70px $--main_color, 0 0 80px$--main_color;
+    }
+  }
+
+
+@keyframes glowbox {
+    from {
+      box-shadow: 0 0 5px rgba(255, 251, 44, 0.411), 0 0 10px rgba(255, 251, 44, 0.411), 0 0 15px #f5e239, 0 0 20px #f5e239, 0 0 25px #f5e239, 0 0 30px #f5e239, 0 0 35px #f5e239;
+    }
+    
+    to {
+      box-shadow: 0 0 10px rgba(255, 251, 44, 0.411), 0 0 15px $--main_color, 0 0 20px $--main_color, 0 0 25px$--main_color, 0 0 30px$--main_color, 0 0 35px $--main_color, 0 0 40px$--main_color;
+    }
+  }

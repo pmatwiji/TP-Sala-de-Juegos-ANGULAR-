@@ -55,6 +55,9 @@ import { InputJugadoresComponent } from './componentes/input-jugadores/input-jug
 import { SexoPipe } from './pipes/sexo.pipe';
 import { PrincipalListComponent } from './componentes/principal-list/principal-list.component';
 import { PrincipalArcadeComponent } from './componentes/principal-arcade/principal-arcade.component';
+import { PrincipalResultadosComponent } from './componentes/principal-resultados/principal-resultados.component';
+import { PrincipalJugadoresComponent } from './componentes/principal-jugadores/principal-jugadores.component';
+import { PrincipalConfigComponent } from './componentes/principal-config/principal-config.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +85,10 @@ import { PrincipalArcadeComponent } from './componentes/principal-arcade/princip
     InputJugadoresComponent,
     SexoPipe,
     PrincipalListComponent,
-    PrincipalArcadeComponent
+    PrincipalArcadeComponent,
+    PrincipalResultadosComponent,
+    PrincipalJugadoresComponent,
+    PrincipalConfigComponent
   ],
   imports: [
     BrowserModule,

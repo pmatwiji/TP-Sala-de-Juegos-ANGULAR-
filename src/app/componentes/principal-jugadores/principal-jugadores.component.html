@@ -1,0 +1,11 @@
+<div class="container__listadoJugadores">
+    <h1 class="tituloLista">Jugadores</h1>
+    <table>
+      <tbody>
+          <tr *ngFor="let jugador of listJugadores" [ngStyle]="{'color': getRandomColor() }">
+              <td>{{jugador.nombre}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
