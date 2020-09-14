@@ -3,6 +3,10 @@ $fuente_principal: Super Retro;
 $fuente_italic: Super Retro Italic;
 $--main_color:#fff25d;
 
+html{
+    background-color: black;
+}
+
 @font-face {
     font-family: 'Super Retro';
     src: url("./assets/fuentes/Super\ Retro\ M54.ttf");

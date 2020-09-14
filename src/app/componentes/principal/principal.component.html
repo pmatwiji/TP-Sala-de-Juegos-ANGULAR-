@@ -7,8 +7,8 @@
 <div class="main">
   <app-cabecera></app-cabecera>
   <div class="cont">
-    <app-principal-list (opcionArcadeEvento)="verOpcion($event)"></app-principal-list>
-    <app-principal-list *ngIf="opcionSeleccionada=='juegos'"></app-principal-list>
+    <app-principal-list (opcionArcadeEvento)="verOpcion($event)" ></app-principal-list>
+    <app-principal-arcade [opcionSeleccionada]="opcionSeleccionada" *ngIf="opcionSeleccionada=='juegos'"></app-principal-arcade>
   </div>
 </div>
 

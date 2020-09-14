@@ -1,0 +1,72 @@
+@import '../../../styles.scss';
+
+$clr-dark: rgb(13,17,19);
+$clr-ligth: #fff;
+$clr-btn: #FF7300;
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+.container__arcade{
+    display: flex;
+    width: 50vw;
+    margin-top: 7.5%;
+    height: 90%;
+    gap: 20px;
+    flex-wrap: wrap;
+    .juego{
+        position: relative;
+        width: 12.5em;
+        background-color: $clr-dark;
+        height: max-content;
+        border-radius: 15px;
+        color: $clr-ligth;
+        justify-content: center;
+        flex-direction: column;
+        &:hover{
+            animation: glowbox 1s ease-in-out infinite alternate;
+        }
+        .nombre{
+            margin: 1.75em 0;
+            text-align: center;
+            font-size: 1em;
+        }
+        img{
+            max-width: 100%;
+            border-radius: 15px 15px 0 0;
+        }
+        .ranking{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .btn-jugar{
+
+            text-align: center;
+            margin: 0.75em auto;
+            background-color: $clr-btn;
+            border-radius: 15px;
+            width: 80%;
+            cursor: pointer;
+        }
+    }
+}
+
+h1,h2,h3,p {
+    margin: 0;
+}
+
+@keyframes glowbox {
+    from {
+      box-shadow: 0 0 5px rgba(255, 251, 44, 0.411), 0 0 10px rgba(255, 251, 44, 0.411), 0 0 15px #f5e239, 0 0 20px #f5e239, 0 0 25px #f5e239, 0 0 30px #f5e239, 0 0 35px #f5e239;
+    }
+    
+    to {
+      box-shadow: 0 0 10px rgba(255, 251, 44, 0.411), 0 0 15px $--main_color, 0 0 20px $--main_color, 0 0 25px$--main_color, 0 0 30px$--main_color, 0 0 35px $--main_color, 0 0 40px$--main_color;
+    }
+  }
+
+

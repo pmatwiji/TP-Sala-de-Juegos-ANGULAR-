@@ -1,9 +1,9 @@
 @import '../../../styles.scss';
 
 .container-list {
-    margin-top: 10vh;
+    margin-top: 10%;
     background-color: rgba(0, 0, 0, 0.418);
-    width: 35vw;
+    width: 70%;
     min-height: 65vh;
     text-align: center;
     font-family: $fuente_italic;
@@ -13,11 +13,13 @@
     border-radius: 10%;
     color: $--main_color;
     letter-spacing: 3px;
-    box-sizing: border-box;   
+    transform: translate(22.5%,0%);
     ul{
         list-style:none;
         margin: auto;
-        p {
+        position: relative;
+        right: 5%;
+        li {
             padding: 1em 0px;
             &:hover {
                 color: whitesmoke;
