@@ -1,69 +1,181 @@
+@import '../../../styles.scss';
+// form {
+//     border: 10px solid #f1f1f1;
+//     padding: 10px;
+//     background:gray;
+// }
 
-form {
-    border: 10px solid #f1f1f1;
-    padding: 10px;
-    background:gray;
-}
+// input[type=text], input[type=password] {
+//     width: 100%;
+//     padding: 12px 20px;
+//     margin: 8px 0;
+//     display: inline-block;
+//     border: 1px solid #ccc;
+//     box-sizing: border-box;
+// }
 
-input[type=text], input[type=password] {
+// button {
+//     background-color: #4CAF50;
+//     color: white;
+//     padding: 14px 20px;
+//     margin: 8px 0;
+//     border: none;
+//     cursor: pointer;
+//     width: 100%;
+// }
+
+// button:hover {
+//     opacity: 0.8;
+// }
+
+// .cancelbtn {
+//     width: auto;
+//     padding: 10px 18px;
+//     background-color: #f44336;
+// }
+// .aceptbtn {
+//     width: auto;
+//     padding: 10px 18px;
+//     background-color: #3664F4;
+// }
+// .imgcontainer {
+//     text-align: center;
+//     margin: 24px 0 12px 0;
+// }
+
+// img.avatar {
+//     width: 40%;
+//     border-radius: 50%;
+// }
+
+// .container {
+//     padding: 16px;
+// }
+
+// span.psw {
+//     float: right;
+//     padding-top: 16px;
+// }
+
+// /* Change styles for span and cancel button on extra small screens */
+// @media screen and (max-width: 300px) {
+//     span.psw {
+//        display: block;
+//        float: none;
+//     }
+//     .cancelbtn {
+//        width: 100%;
+//     }
+// }
+.blur{
+    filter: blur(8px);
+    background: url(../../../assets/imagenes/back__sala.gif) center;
+    background-size: cover;
+    height: 100%;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    position: absolute;
 }
+.main{
+    //background: url(../../../assets/imagenes/back__sala.gif) center;
+    //background-size: cover;
+    //height: 100vh;
+    //width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 50%;
+    height: 50%;
+    .container__login {
+        width: 100%;
+        height: 100%;
+       //border: 5px solid $clr-dark;
+       box-shadow: 0px 0px 43px 25px rgba(0,0,0,0.75);
+        display: flex;
+        img{
+            width: 50%;
+            height: 100%;
+        }
+        .container__form-login{
+            width: 50%;
+            height: 100%;
+            background-color: $clr-ligth;
+            label {
+                color: $clr-dark;
+            }
+            .close-button{
+                height: 50px;
+                width: 50px;
+                position: fixed;
+                left: 93%;
+                top: 1%;
+                box-sizing: border-box;
+                line-height: 50px;
+                display: inline-block;
 
-button:hover {
-    opacity: 0.8;
-}
+                &:before, &:after {
+                    $width: 50px;
+                    $height: 10px;
+                    transform: rotate(-45deg);
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -$height/2;
+                    margin-left: -$width/2;
+                    display: block;
+                    height: $height;
+                    width: $width;
+                    background-color:$clr-dark;
+                    transition: all 0.25s ease-out;
+                }
+            
+                &:after {
+                    transform: rotate(-135deg);
+                }
+            
+                &:hover {
+                    &:before, &:after {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+            
+        }
 
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-.aceptbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #3664F4;
-}
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
     }
-    .cancelbtn {
-       width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    h2 {
+        color: $clr-btn;
+        font-weight: 300;
+        font-size: 2.6em;
+        margin: 0.2em 0 0.1em;
     }
 }
+  .form-element {
+    margin: 1.6em 0;
+    input {
+        border: none;
+        border-bottom: 1px solid $clr-dark;
+    }
+  }
+
+  .form-stack {
+    display: flex;
+    flex-direction: column;
+  }

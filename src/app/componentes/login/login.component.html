@@ -1,27 +1,4 @@
-<!--div style="margin: 20% auto; width: 30%;">
-  <div class="row">
-    <div class="col-lg-6">
-      Usuario
-    </div>
-    <div class="col-lg-6">
-      <input type="text"  [(ngModel)]="usuario">
-    </div>
-  </div>
-  <div class="row" style="margin-top: 5px">
-    <div class="col-lg-6">
-      Clave
-    </div>
-    <div class="col-lg-6">
-      <input type="password" [(ngModel)]="clave">
-    </div>
-  </div>
-  <div class="row" style="text-align: center; margin-top: 10px">
-    <div class="col-lg-12">
-      <button (click)="Entrar()" class="btn btn-info btn-lg" >Entrar</button>
-    </div>
-  </div>
-</div-->
- <div class="container" >
+ <!-- <div class="container" >
   <div class="jumbotron" style="padding:50px;">
     <form action="return true;">
       <div class="imgcontainer">
@@ -54,4 +31,33 @@
      
     </form>
   </div>
-</div>
+</div> -->
+<div class="blur"></div>
+ <div class="main">
+   <div class="container__login">
+      <img src="../../../assets/imagenes/login2.gif" alt="">
+      <div class="container__form-login">
+        <a routerLink="/Principal" class="close-button"></a>
+
+        <div class="content">
+          <h2>Login</h2>
+          <form action="" id="form-login">
+            
+            <div class="form-element form-stack">
+              <label for="username-login" class="form-label">Correo electrónico</label>
+              <input type="text" id="username-login" name="username">
+            </div>
+
+            <div class="form-element form-stack">
+              <label for="password-login" class="form-label">Contraseña</label>
+              <input type="password" id="password-login" name="password">
+            </div>
+
+            <div class="form-element">
+              <button id="logIn" class="login" type="submit" name="login">Ingresar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+   </div>
+ </div>
