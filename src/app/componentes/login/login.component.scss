@@ -67,6 +67,9 @@
 //        width: 100%;
 //     }
 // }
+
+$clr-txt-log:#49005C;
+
 .blur{
     filter: blur(8px);
     background: url(../../../assets/imagenes/back__sala.gif) center;
@@ -161,7 +164,7 @@
     margin: 0 auto;
     position: relative;
     h2 {
-        color: $clr-btn;
+        color: $clr-txt-log;
         font-weight: 300;
         font-size: 2.6em;
         margin: 0.2em 0 0.1em;

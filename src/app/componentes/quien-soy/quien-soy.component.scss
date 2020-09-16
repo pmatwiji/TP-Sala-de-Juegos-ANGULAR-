@@ -1,43 +1,240 @@
-.imagenDeQuienSoy{
-    width: 100%;
-   
+@import '../../../styles.scss';
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+$mainColor: #ff3333;
+$barColor: #f5f5f5;
+
+%title {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+%subtitle {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.gral {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: url(../../../assets/imagenes/back__sala.gif);
+}
+
+.container__quiensoy {
+  background-color: $clr-ligth;
+  font-family: 'Oswald', sans-serif;
+  width: 70%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  padding: 2em;
+  display: flex;
+
+  .containerLeft {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:  0 auto;
+    .containerPhoto {
+      .photo {
+        border: 5px solid $mainColor;
+        border-radius: 50%;
+        //box-shadow: 0px 0px 15px 7.5px rgba(0, 0, 0, 0.75);
+      }
     }
-body {
-    font: 20px Montserrat, sans-serif;
-    line-height: 1.8;
-    color: #f5f6f7;
+
+    .containerInfo {
+      color: #333;
+
+      .mainName {
+        margin-top: 1em;
+        font-size: 2em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 1;
+        &::after{
+            content: '';
+            display: block;
+            height: 2px;
+            width: 8em;
+            background-color: $mainColor;
+            margin: 0.5em auto;
+        }
+      }
+
+      .description {
+        padding: 1em;
+        text-align: left;
+      }
+
+      .social {
+        text-align: left;
+        padding-left: 5%;
+        list-style: none;
+
+        li {
+          padding-top: 10px;
+
+          a {
+            text-decoration: none;
+            color: #333;
+
+            i {
+              color: #fff;
+              width: 2em;
+              height: 2em;
+              background: $mainColor;
+              border-radius: 30px;
+              line-height: 30px;
+              text-align: center;
+            }
+
+            i:hover {
+              background: #b30000;
+              color: #111;
+              transition: all 200ms linear;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .containerRight {
+    //border: $mainColor 2px solid;
+    height: 100%;
+    width: 75%;
+    padding: 1% 1% 1% 5%;
+
+    .title {
+      @extend %title;
+    }
+
+    .bars {
+      //border: blue 2px solid;
+      padding-top: 1%;
+      overflow: hidden;
+
+      .tool {
+        letter-spacing: 1.2px;
+      }
+
+      .bar {
+        //border: green 2px solid;
+        background-color: $barColor;
+        height: 20px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+        margin: 7px 0;
+        box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+
+        .progress {
+          height: 20px;
+          background-color: $mainColor;
+          border-radius: 5px 0 0;
+          animation-name: animateBar;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in;
+          animation-duration: 2s;
+        }
+
+        @keyframes animateBar {
+          0% {
+            transform: translateX(-100%);
+          }
+
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        .css {
+          width: 90%;
+        }
+
+        .js,
+        .c {
+          width: 50%;
+        }
+
+        .sass,
+        .bootstrap,
+        .photoshop,
+        .illustrator,
+        .ts {
+          width: 80%;
+        }
+      }
+    }
+
+    .studies {
+      .subtitle {
+        @extend %subtitle;
+      }
+
+      .description {
+        margin-top: 1em;
+      }
+    }
+
+    .jobs {
+      .subtitle {
+        @extend %subtitle;
+      }
+
+      .description {
+        margin-top: 1em;
+      }
+    }
+  }
 }
-p {font-size: 16px;}
-.margin {margin-bottom: 45px;}
-.bg-1 { 
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
+
+.close-button{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: 95%;
+    top: -2%;
+    box-sizing: border-box;
+    line-height: 50px;
+    display: inline-block;
+
+    &:before, &:after {
+        $width: 50px;
+        $height: 10px;
+        transform: rotate(-45deg);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -$height/2;
+        margin-left: -$width/2;
+        display: block;
+        height: $height;
+        width: $width;
+        background-color:$clr-dark;
+        transition: all 0.25s ease-out;
+    }
+
+    &:after {
+        transform: rotate(-135deg);
+    }
+
+    &:hover {
+        &:before, &:after {
+            transform: rotate(0deg);
+        }
+    }
 }
-.bg-2 { 
-    background-color: #474e5d; /* Dark Blue */
-    color: #ffffff;
-}
-.bg-3 { 
-    background-color: #ffffff; /* White */
-    color: #555555;
-}
-.bg-4 { 
-    background-color: #2f2f2f; /* Black Gray */
-    color: #fff;
-}
-.container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-.navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-}
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
+
+@media (max-width: 1025px) {
+    .container__quiensoy{
+        flex-direction: column;
+    }
 }
