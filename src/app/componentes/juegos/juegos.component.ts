@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { NombreJuegoService } from '../../servicios/nombre-juego.service';
 
 @Component({
   selector: 'app-juegos',
@@ -8,10 +9,16 @@ import { Title } from '@angular/platform-browser';
 })
 export class JuegosComponent implements OnInit {
 
-  constructor(private title:Title) { }
+  juegoSeleccionado: string;
+  constructor(private title:Title, private nombreJuego: NombreJuegoService) { }
 
   ngOnInit() {
     this.title.setTitle("Sala de Juegos - Juegos");
+    this.juegoSeleccionado = this.nombreJuego.leerJuego();
   }
+
+
+
+
 
 }

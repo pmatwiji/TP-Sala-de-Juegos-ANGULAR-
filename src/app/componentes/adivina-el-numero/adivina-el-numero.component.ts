@@ -1,4 +1,3 @@
-
 import { Component, OnInit ,Input,Output,EventEmitter} from '@angular/core';
 import { JuegoAdivina } from '../../clases/juego-adivina'
 
@@ -52,7 +51,7 @@ export class AdivinaElNumeroComponent implements OnInit {
           mensaje="No era el  "+this.nuevoJuego.numeroIngresado;
           break;
           case 5:
-          mensaje=" intentos y nada.";
+          mensaje=this.contador + " intentos y nada.";
           break;
           case 6:
           mensaje="Afortunado en el amor";

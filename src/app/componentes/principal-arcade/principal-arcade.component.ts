@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NombreJuegoService } from '../../servicios/nombre-juego.service';
 
 @Component({
   selector: 'app-principal-arcade',
@@ -8,7 +9,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PrincipalArcadeComponent implements OnInit {
 
   @Input() opcionSeleccionada: string;
-  constructor() { }
+  //@Output() juegoSeleccionadoEvento = new EventEmitter<string>();
+
+  constructor(private nombreJuego: NombreJuegoService) { }
 
   ngOnInit(): void {
   }
@@ -17,5 +20,15 @@ export class PrincipalArcadeComponent implements OnInit {
   //   this.opcionSeleccionada=opcion;
   //   console.log("tres: " + opcion);
   // }
+
+  // seleccionarJuego(juego: string)
+  // {
+  //   this.juegoSeleccionadoEvento.emit(juego);
+  //   console.log(juego);
+  // }
+
+  setearJuego(juego: string) {
+    this.nombreJuego.seleccionarJuego(juego);
+  }
 
 }
