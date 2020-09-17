@@ -1,0 +1,53 @@
+<div class="juego">
+  <div style="text-align:center">
+    <h1>
+      Piedra, Papel o Tijera!
+    </h1>
+  </div>
+  <div class="tablero">
+    <div class="btns-jugador">
+      <div class="cont-botones">
+        <div class="btn" (click)="seleccionar('piedra')" #disabled>
+          <img [ngClass]="{'glow': opcionSeleccionada=='piedra'}" src="../../../assets/imagenes/piedra__icon.jpg"
+            alt="Piedra">
+        </div>
+        <div class="btn" (click)="seleccionar('papel')" #disabled2>
+          <img [ngClass]="{'glow': opcionSeleccionada=='papel'}" src="../../../assets/imagenes/papel__icon.jpg"
+            alt="Papel">
+        </div>
+        <div class="btn" (click)="seleccionar('tijera')" #disabled3>
+          <img [ngClass]="{'glow': opcionSeleccionada=='tijera'}" src="../../../assets/imagenes/tijera__icon.jpg"
+            alt="Tijera">
+        </div>
+      </div>
+    </div>
+    <div class="resultado">
+      <div class="score-jugador">
+        <h1>Jugador</h1>
+        <h2>{{contadorJugador}}</h2>
+      </div>
+      <div class="mensaje">
+        <h1>{{mensaje}}</h1>
+    </div>
+      <div class="score-maquina">
+        <h1>Maquina</h1>
+        <h2>{{contadorMaquina}}</h2>
+      </div>
+
+    </div>
+    <div class="opcion-maquina">
+      <div class="cont-botones">
+        <div class="btn btn-maquina">
+          <img [ngClass]="{'glow': opcionMaquina=='piedra'}" src="../../../assets/imagenes/piedra__icon.jpg" alt="">
+        </div>
+        <div class="btn btn-maquina">
+          <img [ngClass]="{'glow': opcionMaquina=='papel'}" src="../../../assets/imagenes/papel__icon.jpg" alt="">
+        </div>
+        <div class="btn btn-maquina">
+          <img [ngClass]="{'glow': opcionMaquina=='tijera'}" src="../../../assets/imagenes/tijera__icon.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

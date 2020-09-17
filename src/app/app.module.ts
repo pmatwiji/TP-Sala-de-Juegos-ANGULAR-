@@ -58,6 +58,7 @@ import { PrincipalArcadeComponent } from './componentes/principal-arcade/princip
 import { PrincipalResultadosComponent } from './componentes/principal-resultados/principal-resultados.component';
 import { PrincipalJugadoresComponent } from './componentes/principal-jugadores/principal-jugadores.component';
 import { PrincipalConfigComponent } from './componentes/principal-config/principal-config.component';
+import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +89,8 @@ import { PrincipalConfigComponent } from './componentes/principal-config/princip
     PrincipalArcadeComponent,
     PrincipalResultadosComponent,
     PrincipalJugadoresComponent,
-    PrincipalConfigComponent
+    PrincipalConfigComponent,
+    PiedraPapelTijeraComponent
   ],
   imports: [
     BrowserModule,

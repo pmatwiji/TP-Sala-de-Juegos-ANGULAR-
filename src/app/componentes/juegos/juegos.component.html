@@ -2,8 +2,9 @@
   <router-outlet></router-outlet>
   <app-menu></app-menu>
   <div class="container__juegos" >
-    <app-agilidad-aritmetica ></app-agilidad-aritmetica>
+    <app-agilidad-aritmetica *ngIf="juegoSeleccionado=='agilidad'"></app-agilidad-aritmetica>
     <app-adivina-el-numero *ngIf="juegoSeleccionado=='adivina'"></app-adivina-el-numero>
+    <app-piedra-papel-tijera ></app-piedra-papel-tijera>
   </div>
 </div>
-<!-- *ngIf="juegoSeleccionado=='agilidad'" -->
+<!-- *ngIf="juegoSeleccionado=='ppt'" -->
