@@ -2,7 +2,8 @@
   <router-outlet></router-outlet>
   <app-menu></app-menu>
   <div class="container__juegos" >
-    <app-adivina-el-numero ></app-adivina-el-numero>
+    <app-agilidad-aritmetica ></app-agilidad-aritmetica>
+    <app-adivina-el-numero *ngIf="juegoSeleccionado=='adivina'"></app-adivina-el-numero>
   </div>
 </div>
-<!-- *ngIf="juegoSeleccionado=='adivina'" -->
+<!-- *ngIf="juegoSeleccionado=='agilidad'" -->

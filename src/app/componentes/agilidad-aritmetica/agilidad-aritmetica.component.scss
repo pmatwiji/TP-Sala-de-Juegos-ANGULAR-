@@ -1,0 +1,39 @@
+@import '../../../styles.scss';
+form {
+    border: 10px solid $clr-txt-log;
+    border-radius: 15px;
+    padding: 2em;
+    background:$clr-dark;
+    color: $clr-ligth;
+    display: flex;
+    flex-direction: column;
+    font-family: $fuente_arcade;
+    letter-spacing: 1.1px;
+    text-align: center;
+    width: 500px;
+    ul{
+        padding: 0;
+        list-style: none;
+    }
+    input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+}
+
+button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}

@@ -1,38 +1,35 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!--app-menu></app-menu-->
-<!-- index.html -->
+<form name="juego">
+  <ul>
+    <li>
+      Primer numero: <input placeholder="primer numero" type="text" class="form-control" readonly value="{{primerNumero}}"/>
+    </li>
+    <li>
+      Operador: <input placeholder="operador"  type="text" class="form-control" readonly value="{{operador}}" />
 
+    </li>
+    <li>
+      Segundo numero: <input placeholder="segundo numero"  type="text" class="form-control" readonly value="{{segundoNumero}}"/>
 
-<!--form name="juego">
-<ul>
-   <li>
-   Primer número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-  
-  </li>
-  <li>
-   Operador: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-    
-  </li>
-  <li>
-   Segundo número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-    
-  </li>
-  <li>
-    Respuesta: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
-     
-   </li>
-  <li>
-    <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button></h2>
-  </li>
-  <li>
-    <h2 [hidden]="!ocultarVerificar"><button  (click)="NuevoJuego()"  class="btn btn-info btn-lg">Nuevo</button></h2>
-  </li>
-  <li>
-    <h2><p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p></h2>
+    </li>
+    <li>
+      Respuesta: <input placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" [(ngModel)]="respuesta"/>
 
-    <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
-    <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
-  </li>
-</ul>
+    </li>
+    <li>
+      <h2 [hidden]="ocultarVerificar"><button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}}
+        </button></h2>
+    </li>
+    <li>
+      <h2 [hidden]="!ocultarVerificar"><button (click)="NuevoJuego()" class="btn btn-info btn-lg">Nuevo</button></h2>
+    </li>
+    <li>
+      <h2 [hidden]="ocultarEspera">
+        <p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p>
+      </h2>
 
-</form-->
+      <h3 [hidden]="ocultarGano">usted adivino el numero</h3>
+      <h3 [hidden]="ocultarPerdio">No adivino el numero</h3>
+    </li>
+  </ul>
+
+</form>
