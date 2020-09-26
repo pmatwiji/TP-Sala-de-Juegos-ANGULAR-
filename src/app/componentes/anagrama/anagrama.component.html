@@ -1,3 +1,17 @@
-<p>
-  anagrama works!
-</p>
+<div class="juego">
+  <div style="text-align:center">
+    <h1>
+      Anagrama
+    </h1>
+  </div>
+  <div class="tablero">
+    <h1 [hidden]="juegoNuevo==false">Ingrese la palabra correcta</h1>
+    <h3 [hidden]="juegoNuevo==false">{{palabraDesordenada}}</h3>
+    <input [hidden]="juegoNuevo==false"  type="text" name="palabraUsuario" [(ngModel)]="respuesta">
+    <button [hidden]="juegoNuevo==true"  (click)="nuevaPalabra()">Nueva palabra</button>
+    <button [hidden]="juegoNuevo==false" (click)="verificar()" for="palabraUsuario" id="enviar">Enviar</button>
+
+    <h1 [hidden]="ganador==false">Ganador!</h1>
+    <h1 [hidden]="perdedor==false">Perdiste...</h1>
+  </div>
+</div>

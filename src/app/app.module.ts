@@ -59,6 +59,8 @@ import { PrincipalResultadosComponent } from './componentes/principal-resultados
 import { PrincipalJugadoresComponent } from './componentes/principal-jugadores/principal-jugadores.component';
 import { PrincipalConfigComponent } from './componentes/principal-config/principal-config.component';
 import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
+import { MemotestComponent } from './componentes/memotest/memotest.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +92,9 @@ import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/pi
     PrincipalResultadosComponent,
     PrincipalJugadoresComponent,
     PrincipalConfigComponent,
-    PiedraPapelTijeraComponent
+    PiedraPapelTijeraComponent,
+    TaTeTiComponent,
+    MemotestComponent
   ],
   imports: [
     BrowserModule,
