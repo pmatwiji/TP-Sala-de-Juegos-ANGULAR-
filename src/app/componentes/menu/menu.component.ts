@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-menu',
@@ -8,27 +8,26 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute,
-    private router: Router) { }
+  botonJuego:boolean= false;
+  @Output() cambiarJuegoEvent = new EventEmitter<string>();
+
+  constructor() { }
 
   ngOnInit() {
   }
 
-  Juego(tipo: string) {
-    switch (tipo) {
-      case 'Adivina':
-          this.router.navigate(['/Juegos/Adivina']);
-        break;
-      case 'Agilidad':
-          this.router.navigate(['/Juegos/Agilidad']);
-        break;
-      case 'AdivinaMasListado':
-          this.router.navigate(['/Juegos/AdivinaMasListado']);
-        break;
-      case 'AgilidadaMasListado':
-          this.router.navigate(['/Juegos/AgilidadaMasListado']);
-        break;
-    }
+  btnMenuJuegos(){
+    this.botonJuego=!this.botonJuego;
   }
+
+  cerrar(){
+    this.botonJuego=false;
+  }
+
+  cambiarJuego(juego:string){
+    this.cambiarJuegoEvent.emit(juego);
+  }
+
+
 
 }

@@ -1,13 +1,13 @@
 <div class="main">
   <router-outlet></router-outlet>
-  <app-menu></app-menu>
+  <app-menu (cambiarJuegoEvent)="cambiarJuego($event)"></app-menu>
   <div class="container__juegos" >
     <app-agilidad-aritmetica *ngIf="juegoSeleccionado=='agilidad'"></app-agilidad-aritmetica>
     <app-adivina-el-numero *ngIf="juegoSeleccionado=='adivina'"></app-adivina-el-numero>
     <app-piedra-papel-tijera *ngIf="juegoSeleccionado=='ppt'"></app-piedra-papel-tijera>
     <app-ta-te-ti *ngIf="juegoSeleccionado=='tateti'"></app-ta-te-ti>
     <app-anagrama *ngIf="juegoSeleccionado=='anagrama'"></app-anagrama>
-    <app-memotest></app-memotest>
+    <app-memotest *ngIf="juegoSeleccionado=='memotest'"></app-memotest>
   </div>
 </div>
 

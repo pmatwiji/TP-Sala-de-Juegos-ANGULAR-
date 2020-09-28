@@ -17,7 +17,7 @@ export class AnagramaComponent implements OnInit {
   palabraSeparada;
   palabraDesordenada;
   juegoNuevo:boolean = false;
-  respuesta: string;
+  respuesta: string = '';
   ganador: boolean = false;
   perdedor:boolean = false;
 

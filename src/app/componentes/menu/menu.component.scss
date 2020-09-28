@@ -103,3 +103,14 @@
     }
   }
 }
+
+.menuJuegos{
+  padding-left: 0px;
+  background-color: #7f2596;
+  li{
+    border-bottom: none !important;
+  }
+  li:hover{
+    transform: scale(1)!important;
+}
+}

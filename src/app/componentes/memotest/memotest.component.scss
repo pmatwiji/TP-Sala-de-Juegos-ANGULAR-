@@ -27,7 +27,7 @@
     border-radius: 10px;
 
     .casillero {
-      background: url(../../../assets/imagenes/quiensoy3.jpg) center;
+      background: white;//url(../../../assets/imagenes/quiensoy3.jpg) center;
       background-size: cover;
       transition: background-color .5s;
       display: flex;
@@ -35,8 +35,6 @@
       align-items: center;
 
       &:hover {
-        //background-color: rgba(186, 81, 212, 0.5);
-        //transition: background-color .5s;
         cursor: pointer;
       }
 
@@ -45,22 +43,39 @@
   }
 }
 
-.fondo-uno{
+button {
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+  border: 5px solid $clr-txt-log;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.c1{
   background-color: red !important;
+  background-image: none;
+}
+.c2{
+  background-color: cyan !important;
+  background-image: none;
 }
 
-.fondo-dos {
-  background-color: white !important;
+.c3{
+  background-color: fuchsia !important;
+  background-image: none;
 }
-
-.fondo-tres {
-  background-color: green !important;
-}
-
-.fondo-cuatro{
+.c4{
   background-color: yellow !important;
+  background-image: none;
 }
 
-.fondo-cinco {
-  background-color: rgb(32, 174, 230) !important;
+.c5{
+  background-color: green !important;
+  background-image: none;
 }

@@ -17,6 +17,10 @@ export class JuegosComponent implements OnInit {
     this.juegoSeleccionado = this.nombreJuego.leerJuego();
   }
 
+  cambiarJuego(juego:string){
+    this.juegoSeleccionado=juego;
+  }
+
 
 
 
