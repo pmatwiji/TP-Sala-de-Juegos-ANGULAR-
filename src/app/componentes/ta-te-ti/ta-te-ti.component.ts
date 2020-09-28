@@ -15,7 +15,7 @@ export class TaTeTiComponent implements OnInit {
   }
   
   posiciones = new Array(9);
-  resultado:string;
+  resultado:string = '';
 
   ponerX(posicion:number){
     if(!this.posiciones[posicion]){
@@ -111,6 +111,11 @@ export class TaTeTiComponent implements OnInit {
 
   reset(){
     this.posiciones = new Array(9);
+    for (let index = 0; index < this.posiciones.length; index++) {
+      let item= document.querySelector('#c'+(index+1));
+      item.innerHTML='';
+      }
+      this.resultado='';
   }
 
 }
