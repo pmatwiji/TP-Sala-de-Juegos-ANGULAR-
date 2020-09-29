@@ -58,6 +58,10 @@
     }
     .container__mis-datos{
         color: whitesmoke;
+        font-family: $fuente_arcade;
+        a{
+            text-decoration: none;
+        }
     }
 
 }

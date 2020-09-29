@@ -13,6 +13,7 @@ import { RegistroComponent } from '../componentes/registro/registro.component';
 import { MenuCardComponent } from '../componentes/menu-card/menu-card.component';
 import { QuienSoyComponent } from '../componentes/quien-soy/quien-soy.component';
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
+import { TetrisComponent } from '../componentes/tetris/tetris.component';
 //import { MenuComponent } from '../componentes/menu/menu.component';
 //import { AdivinaMasListadoComponent } from '../componentes/adivina-mas-listado/adivina-mas-listado.component';
 //import { AgilidadMasListadoComponent } from '../componentes/agilidad-mas-listado/agilidad-mas-listado.component';
@@ -45,7 +46,7 @@ children:
      //{path: 'Adivina' , component: AdivinaElNumeroComponent},
      //{path: 'Agilidad' , component: AgilidadAritmeticaComponent},
     //{path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
-    //{path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
+    {path: 'tetris' , component: TetrisComponent},
     ]
 },
 {path: '**' , component: ErrorComponent},

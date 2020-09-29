@@ -1,0 +1,75 @@
+@import '../../../styles.scss';
+
+
+.juego {
+  height: 100%;
+  width: 50vw;
+  border: 10px solid $clr-txt-log;
+  border-radius: 15px;
+  padding: 2em;
+  background: $clr-dark;
+  color: $clr-ligth;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: $fuente_arcade;
+  letter-spacing: 1.1px;
+  font-size: 2em;
+  position: absolute;
+  top: 0%;
+  left: 25%;
+
+  .tablero{
+    margin: 00px auto;
+    //vertical-align: center;
+    width: 200px;
+    height: 400px;
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    flex-wrap: wrap;
+    div{
+        height: 20px;
+        width: 20px;
+        //background-color: red;
+    }
+
+  }
+}
+
+.tetrominoes{
+    background-color: blue;
+}
+
+.mini-grid{
+    width: 80px;
+    height: 80px;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: rgb(238, 238, 236);
+    position: relative;
+    right: 200px;
+    div{
+        height: 20px;
+        width: 20px;
+
+    }
+}
+
+.container-tetris{
+    display: flex;
+}
+
+button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 15px;
+    border: 5px solid $clr-txt-log;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+

@@ -61,6 +61,11 @@ import { PrincipalConfigComponent } from './componentes/principal-config/princip
 import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
 import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
 import { MemotestComponent } from './componentes/memotest/memotest.component';
+import { TetrisComponent } from './componentes/tetris/tetris.component';
+import { ClickerComponent } from './componentes/clicker/clicker.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -94,12 +99,15 @@ import { MemotestComponent } from './componentes/memotest/memotest.component';
     PrincipalConfigComponent,
     PiedraPapelTijeraComponent,
     TaTeTiComponent,
-    MemotestComponent
+    MemotestComponent,
+    TetrisComponent,
+    ClickerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RuteandoModule,
+    FontAwesomeModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })
