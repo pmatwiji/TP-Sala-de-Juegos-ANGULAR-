@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NombreJuegoService } from '../../servicios/nombre-juego.service';
+import { AuthService } from "../../servicios/auth.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-principal-arcade',
@@ -10,10 +12,14 @@ export class PrincipalArcadeComponent implements OnInit {
 
   @Input() opcionSeleccionada: string;
   //@Output() juegoSeleccionadoEvento = new EventEmitter<string>();
+  mailUser:any;
 
-  constructor(private nombreJuego: NombreJuegoService) { }
+  constructor(private nombreJuego: NombreJuegoService,private authService: AuthService,  private router: Router) { }
 
   ngOnInit(): void {
+    this.authService.getCurrentUser().then((response:any) => {
+      this.mailUser= response.email;
+    });
   }
 
   // verOpcion(opcion: string){
@@ -28,7 +34,13 @@ export class PrincipalArcadeComponent implements OnInit {
   // }
 
   setearJuego(juego: string) {
-    this.nombreJuego.seleccionarJuego(juego);
+    if(this.mailUser==null){
+      this.router.navigate(['/Login']);
+    }else{
+      this.nombreJuego.seleccionarJuego(juego);
+      this.router.navigate(['/juegos']);
+    }
+    
   }
 
 }

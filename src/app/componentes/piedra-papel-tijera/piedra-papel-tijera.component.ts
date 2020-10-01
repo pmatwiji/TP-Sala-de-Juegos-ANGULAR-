@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { ResultadosService } from "../../servicios/resultados.service";
 
 @Component({
   selector: 'app-piedra-papel-tijera',
@@ -14,7 +15,7 @@ export class PiedraPapelTijeraComponent implements OnInit {
   contadorMaquina:number = 0;
   mensaje:string;
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
+  constructor(private elementRef: ElementRef, private renderer: Renderer2,private resultados: ResultadosService) { }
 
   ngOnInit(): void {
   }
@@ -57,12 +58,14 @@ export class PiedraPapelTijeraComponent implements OnInit {
 
     if(this.contadorJugador == 3){
       this.mensaje='ganaste';
+      this.resultados.guardarResultado('piedra,papel o tijera','ganaste');
       setTimeout(() => {
         this.contadorJugador= 0;
         this.contadorMaquina=0;
       }, 1000);
     } else if(this.contadorMaquina == 3){
       this.mensaje='perdiste';
+      this.resultados.guardarResultado('piedra,papel o tijera','perdiste');
       setTimeout(() => {
         this.contadorJugador= 0;
         this.contadorMaquina=0;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadosService } from "../../servicios/resultados.service";
 
 @Component({
   selector: 'app-clicker',
@@ -15,7 +16,7 @@ export class ClickerComponent implements OnInit {
   cuentaRegresiva:any;
   circuloElem= <HTMLElement>document.querySelector('.tablero');
 
-  constructor() {
+  constructor(private resultados: ResultadosService) {
   this.tiempo=30;
    }
   
@@ -37,6 +38,7 @@ export class ClickerComponent implements OnInit {
       //console.log(this.tiempo);
        if(this.tiempo==0 ) {
          clearInterval(this.cuentaRegresiva);
+         this.resultados.guardarResultado('clicker',this.clicks);
          this.reiniciar=true;
         }
       }, 1000);

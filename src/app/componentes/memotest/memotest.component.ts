@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadosService } from "../../servicios/resultados.service";
 
 @Component({
   selector: 'app-memotest',
@@ -34,7 +35,7 @@ export class MemotestComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private resultados: ResultadosService) { }
 
   ngOnInit(): void {
  
@@ -97,6 +98,7 @@ export class MemotestComponent implements OnInit {
 
 
   victoria() {
+    this.resultados.guardarResultado('memotest','intentos: '+this.intentos);
     setTimeout(() => {
       this.reiniciar();
     }, 2000);

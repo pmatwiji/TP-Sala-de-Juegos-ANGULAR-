@@ -2,8 +2,9 @@
 
   <div class="container__registro">
     <ul class="list__registro">
-      <li class="btn__registro"><a routerLink="/Registro">Registrarse</a></li>
-      <li class="btn__login"><a routerLink="/Login">Ingresar</a></li>
+      <li [hidden]="mailUser" class="btn__registro"><a routerLink="/Registro">Registrarse</a></li>
+      <li [hidden]="mailUser" class="btn__login"><a routerLink="/Login">Ingresar</a></li>
+      <li [hidden]="!mailUser" class="btn__salir" (click)="salir()">Salir</li>
     </ul>
   </div>
 
@@ -12,8 +13,9 @@
   </div>
 
   <div class="container__mis-datos">
-    <p>Pablo Matwijiszyn</p>
-      <a routerLink="/QuienSoy">Quien Soy?</a>
+    <p [hidden]="mailUser">Pablo Matwijiszyn</p>
+    <p [hidden]="!mailUser" >{{mailUser}}</p>
+    <a routerLink="/QuienSoy">Quien Soy?</a>
   </div>
 
 </div>

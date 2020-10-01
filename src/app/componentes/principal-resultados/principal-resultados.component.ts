@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-principal-resultados',
@@ -14,9 +16,14 @@ export class PrincipalResultadosComponent implements OnInit {
               
   colores = ['orange','yellow','green','lightblue','pink','blue'];
 
-  constructor() { }
+  resultados: Observable<any[]>;
+  listaResultados: any[];
+
+  constructor(private db: AngularFireDatabase) { }
 
   ngOnInit(): void {
+    this.resultados = this.db.list('resultados').valueChanges();
+    this.resultados.subscribe(resultados => this.listaResultados = resultados, error => console.log(error));
   }
 
   getRandomColor() {

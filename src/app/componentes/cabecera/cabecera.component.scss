@@ -24,7 +24,7 @@
         .list__registro {
             display: flex;
             list-style: none;
-            .btn__registro, .btn__login{
+            .btn__registro, .btn__login, .btn__salir{
                 position: relative;
                 top: 0;
                 margin: 0 1em;
@@ -48,11 +48,16 @@
                 }
                 
             }
-            .btn__login {
+            .btn__login, .btn__salir {
                 background-color: #E60024;
                 border: 1px solid #AE0313;
                 box-shadow: 0px 5px 0px #AE0313;
             }
+            .btn__salir{
+                color: whitesmoke;
+                //margin: auto;
+            }
+            
         }
         
     }

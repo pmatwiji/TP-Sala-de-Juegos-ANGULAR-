@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { AuthService } from "../../servicios/auth.service";
 import { AngularFireDatabase } from '@angular/fire/database';
@@ -15,6 +15,7 @@ export class RegistroComponent implements OnInit {
   password:string;
   repetirPassword:string;
   mensaje:string;
+  nombreReg:string[];
 
   constructor(private authService: AuthService, private router: Router, private db: AngularFireDatabase, private title:Title ) { }
 
@@ -30,12 +31,14 @@ export class RegistroComponent implements OnInit {
     else {
 
       if (this.password == this.repetirPassword) {
+        this.nombreReg = this.correo.split('@');
         this.authService.register(this.correo, this.password).then(response => {
 
-            //this.authService.getCurrentUser().then((response: any) => {
-            //this.context.list('usuarios').set(response.uid, { correo:this.correo, gano: 0, perdio: 0, id: response.uid });
+            this.authService.getCurrentUser().then((response: any) => {
+            this.db.list('usuarios').set(this.nombreReg[0]+'_UID:'+response.uid, { correo:response.email, id: response.uid });
+            this.authService.logOutCurrentUser();
             this.router.navigate(['/Principal']);
-          //});
+          });
 
         }).catch(error => this.mensaje = error);
         

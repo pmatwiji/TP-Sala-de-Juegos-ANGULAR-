@@ -1,5 +1,6 @@
 import { Component, OnInit ,Input,Output,EventEmitter} from '@angular/core';
 import { JuegoAgilidad } from '../../clases/juego-agilidad'
+import { ResultadosService } from "../../servicios/resultados.service";
 
 import {Subscription} from "rxjs";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
@@ -30,7 +31,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
 
   ngOnInit() {
   }
-   constructor() {
+   constructor(private resultados: ResultadosService) {
      this.ocultarVerificar=true;
      this.ocultarEspera=true;
      this.ocultarGano=true;
@@ -56,7 +57,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
       clearInterval(this.repetidor);
       this.verificar();
       this.ocultarVerificar=true;
-      this.Tiempo=5;
+      this.Tiempo=10;
       this.respuesta= "";
       }
     }, 1000);
@@ -71,6 +72,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
     if(this.resultado === parseInt(this.respuesta)){
       this.ocultarGano=false;
       this.Tiempo=0;
+      this.resultados.guardarResultado('agilidad aritmetica','gano');
 
       setTimeout(() => {
         this.ocultarVerificar=true;
@@ -85,6 +87,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
     }else{
       this.ocultarPerdio=false;
       this.Tiempo=0;
+      this.resultados.guardarResultado('agilidad aritmetica','perdio');
 
       setTimeout(() => {
         this.ocultarVerificar=true;

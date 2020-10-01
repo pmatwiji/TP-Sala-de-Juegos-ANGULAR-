@@ -9,10 +9,10 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let jugador of listJugadores" [ngStyle]="{'color': getRandomColor2() }">
-            <td>{{jugador.nombre}}</td>
-            <td>{{jugador.juego}}</td>
-            <td>{{jugador.puntaje}}</td>
+        <tr *ngFor="let resultado of listaResultados" [ngStyle]="{'color': getRandomColor2() }">
+            <td>{{resultado.usuario}}</td>
+            <td>{{resultado.juego}}</td>
+            <td>{{resultado.resultado}}</td>
         </tr>
     </tbody>
   </table>

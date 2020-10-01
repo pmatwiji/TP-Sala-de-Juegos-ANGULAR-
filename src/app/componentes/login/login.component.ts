@@ -36,4 +36,10 @@ export class LoginComponent implements OnInit {
 
   }
 
+  rapido() {
+    this.correo = 'test@test.com';
+    this.password = '123456';
+
+  }
+
 }

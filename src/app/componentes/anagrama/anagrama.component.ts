@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadosService } from "../../servicios/resultados.service";
 
 @Component({
   selector: 'app-anagrama',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnagramaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private resultados: ResultadosService) { }
 
   ngOnInit() {
   }
@@ -36,8 +37,10 @@ export class AnagramaComponent implements OnInit {
     document.querySelector('#enviar').setAttribute('disabled','true');
     if(this.palabraSeleccionada == this.respuesta.toLocaleLowerCase()){
       this.ganador= true;
+      this.resultados.guardarResultado('anagrama','gano');
     }else{
       this.perdedor = true;
+      this.resultados.guardarResultado('anagrama','perdio');
     }
 
     setTimeout(() => {

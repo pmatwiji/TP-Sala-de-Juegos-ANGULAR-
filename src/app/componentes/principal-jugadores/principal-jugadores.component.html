@@ -2,8 +2,8 @@
     <h1 class="tituloLista">Jugadores</h1>
     <table>
       <tbody>
-          <tr *ngFor="let jugador of listJugadores" [ngStyle]="{'color': getRandomColor() }">
-              <td>{{jugador.nombre}}</td>
+          <tr *ngFor="let usuario of listaUsuarios" [ngStyle]="{'color': getRandomColor() }">
+              <td>{{usuario.correo}}</td>
           </tr>
       </tbody>
     </table>

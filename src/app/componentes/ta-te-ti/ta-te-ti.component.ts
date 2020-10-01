@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadosService } from "../../servicios/resultados.service";
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class TaTeTiComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private resultados: ResultadosService) { }
 
   ngOnInit(): void {
   }
@@ -28,16 +29,20 @@ export class TaTeTiComponent implements OnInit {
         this.ponerO();
           if(this.verificarGanador('o')){
             this.resultado="perdiste";
+            this.resultados.guardarResultado('ta-te-ti','perdiste');
           }else{
             if(this.empate()){
               this.resultado="empate";
+              this.resultados.guardarResultado('ta-te-ti','empate');
             }
           }
         }else{
           this.resultado="empate";
+          this.resultados.guardarResultado('ta-te-ti','empate');
         }
       }else{
         this.resultado="ganaste";
+        this.resultados.guardarResultado('ta-te-ti','ganaste');
       }
       
       
