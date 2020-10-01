@@ -9,14 +9,22 @@
     flex-direction: column;
     align-items: center;
     font-family: $fuente_arcade;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
     h1{
         color: $clr-btn;
+
     }
     table{
+        position: relative;
         text-align: center;
         width: 90%;
         font-size: 1.5em;
         letter-spacing: 3px;
+        max-height: 600px;
+
         thead{
             color: red;
         }

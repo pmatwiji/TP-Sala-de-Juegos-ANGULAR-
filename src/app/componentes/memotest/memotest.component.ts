@@ -32,6 +32,7 @@ export class MemotestComponent implements OnInit {
   deshabilitar:boolean = false;
   parejas:number = 0;
   
+  mensaje:string= '';
 
 
 
@@ -99,6 +100,7 @@ export class MemotestComponent implements OnInit {
 
   victoria() {
     this.resultados.guardarResultado('memotest','intentos: '+this.intentos);
+    this.mensaje= 'ganaste';
     setTimeout(() => {
       this.reiniciar();
     }, 2000);
@@ -108,6 +110,7 @@ export class MemotestComponent implements OnInit {
     this.juegoNuevo = false;
     this.intentos=0;
     this.parejas=0;
+    this.mensaje='';
   }
 
 
