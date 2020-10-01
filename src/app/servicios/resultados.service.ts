@@ -18,7 +18,7 @@ export class ResultadosService {
       this.authService.getCurrentUser().then((response: any) => {
         this.nombreReg = response.email.split('@');
         let fecha:any = Date.now();
-      this.db.list('resultados').set(this.nombreReg[0]+'_'+juego+fecha, { usuario:response.email, juego: juego, resultado:resultado });
+      this.db.list('resultados').set(juego+fecha, { usuario:response.email, juego: juego, resultado:resultado });
     });
   }
 }

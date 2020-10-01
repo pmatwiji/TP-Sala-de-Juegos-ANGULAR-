@@ -35,7 +35,7 @@ export class RegistroComponent implements OnInit {
         this.authService.register(this.correo, this.password).then(response => {
 
             this.authService.getCurrentUser().then((response: any) => {
-            this.db.list('usuarios').set(this.nombreReg[0]+'_UID:'+response.uid, { correo:response.email, id: response.uid });
+            this.db.list('usuarios').set('UID: '+response.uid, { correo:response.email, id: response.uid });
             this.authService.logOutCurrentUser();
             this.router.navigate(['/Principal']);
           });
