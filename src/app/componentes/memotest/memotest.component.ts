@@ -77,7 +77,6 @@ export class MemotestComponent implements OnInit {
             this.parejas++
             this.intentos++;
             if(this.parejas == 5){
-              alert("gano");
               this.victoria();
             }
           } else {
