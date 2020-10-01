@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { AuthService } from "../../servicios/auth.service";
 
 
 @Component({
@@ -15,11 +16,12 @@ export class PrincipalComponent implements OnInit {
   
   opcionSeleccionada: string;
 
-  constructor(private title:Title) {  }
+  constructor(private title:Title,private authService: AuthService) {  }
 
   ngOnInit() {
     this.title.setTitle("Sala de Juegos - Menu Principal");
   }
+
 
   verOpcion(opcion: string){
     this.opcionSeleccionada=opcion;

@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {
+    
+   }
 
   userLogueado:any;
   mailUser:any;
@@ -18,7 +20,7 @@ export class CabeceraComponent implements OnInit {
   ngOnInit() {
     this.authService.getCurrentUser().then((response:any) => {
       this.mailUser= response.email;
-    });
+    }).catch((error :any) => console.log(error));
     
   }
 

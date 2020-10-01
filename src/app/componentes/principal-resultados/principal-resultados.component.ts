@@ -14,7 +14,7 @@ export class PrincipalResultadosComponent implements OnInit {
                   {nombre: 'Luis',juego: 'Adivina el numero',puntaje: '9 intentos'}
                 ];
               
-  colores = ['orange','yellow','green','lightblue','pink','blue'];
+  colores = ['red','cyan','green','fuchsia','yellow','green'];
 
   resultados: Observable<any[]>;
   listaResultados: any[];

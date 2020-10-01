@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let resultado of listaResultados" [ngStyle]="{'color': getRandomColor2() }">
+        <tr *ngFor="let resultado of listaResultados" [ngStyle]="{'color': getRandomColor() }">
             <td>{{resultado.usuario}}</td>
             <td>{{resultado.juego}}</td>
             <td>{{resultado.resultado}}</td>

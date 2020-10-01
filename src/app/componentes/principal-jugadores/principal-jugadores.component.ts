@@ -16,7 +16,7 @@ export class PrincipalJugadoresComponent implements OnInit {
 
                 
 
-  colores = ['orange','yellow','green','lightblue','pink','blue'];
+                colores = ['red','cyan','green','fuchsia','yellow','green'];
 
   usuarios: Observable<any[]>;
   listaUsuarios: any[];
@@ -29,6 +29,11 @@ export class PrincipalJugadoresComponent implements OnInit {
   }
 
   getRandomColor() {
+    var color = Math.floor(0x1000000 * Math.random()).toString(16);
+    return '#' + ('000000' + color).slice(-6);
+  }
+
+  getRandomColor2() {
     return this.colores[Math.floor(Math.random() * this.colores.length)];
   }
 
